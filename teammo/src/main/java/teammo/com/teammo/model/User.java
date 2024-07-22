@@ -1,4 +1,4 @@
-package teammo.com.teammo.entity;
+package teammo.com.teammo.model;
 import jakarta.persistence.*;
 
 @Entity

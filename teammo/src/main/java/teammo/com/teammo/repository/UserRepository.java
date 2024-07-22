@@ -1,6 +1,6 @@
 package teammo.com.teammo.repository;
 
-import teammo.com.teammo.entity.User;
+import teammo.com.teammo.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

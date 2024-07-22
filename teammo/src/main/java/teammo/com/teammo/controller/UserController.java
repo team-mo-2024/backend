@@ -1,6 +1,6 @@
 package teammo.com.teammo.controller;
 
-import teammo.com.teammo.entity.User;
+import teammo.com.teammo.model.User;
 import teammo.com.teammo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
