@@ -12,7 +12,7 @@ public class Apartment {
 
     @Column(name = "apartment_name", nullable = false, length = 45)
     @JsonProperty("apartment_name")
-    private String apartment_name;
+    private String apartmentName;
 
     @Column(name = "address", nullable = false, length = 100)
     @JsonProperty("address")
@@ -27,11 +27,11 @@ public class Apartment {
     }
 
     public String getApartmentName() {
-        return apartment_name;
+        return apartmentName;
     }
 
     public void setApartmentName(String apartment_name) {
-        this.apartment_name = apartment_name;
+        this.apartmentName = apartment_name;
     }
 
     public String getAddress() {
