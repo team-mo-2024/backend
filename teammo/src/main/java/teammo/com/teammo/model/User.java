@@ -6,7 +6,12 @@ import jakarta.persistence.*;
 public class User {
 
     @Id
-    private int userid;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "userid")
+    private int userId;
+
+    @Column(name = "id_code", nullable = false, length = 5)
+    private String idCode;
 
     @Column(name = "id", nullable = false, length = 45)
     private String id;
@@ -15,15 +20,27 @@ public class User {
     private String password;
 
     @Column(name = "is_manager", nullable = false)
-    private boolean is_manager;
+    private boolean isManager;
+
+    @ManyToOne
+    @JoinColumn(name = "id_code", referencedColumnName = "id_code", insertable = false, updatable = false)
+    private Apartment apartment;
 
     // Getters and Setters
     public int getUserid() {
-        return userid;
+        return userId;
     }
 
     public void setUserid(int userid) {
-        this.userid = userid;
+        this.userId = userid;
+    }
+
+    public String getIdCode() {
+        return idCode;
+    }
+
+    public void setIdCode(String idCode) {
+        this.idCode = idCode;
     }
 
     public String getId() {
@@ -43,10 +60,18 @@ public class User {
     }
 
     public boolean isManager() {
-        return is_manager;
+        return isManager;
     }
 
     public void setManager(boolean manager) {
-        is_manager = manager;
+        isManager = manager;
+    }
+
+    public Apartment getApartment() {
+        return apartment;
+    }
+
+    public void setApartment(Apartment apartment) {
+        this.apartment = apartment;
     }
 }
