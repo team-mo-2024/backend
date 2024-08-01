@@ -13,6 +13,7 @@ public class PostDTO {
     private Boolean isAnonymous;
     private String type;
     private int userid;
+    private String userId; //동,호수
     private String idCode;
 
     // Getters and Setters
@@ -95,5 +96,13 @@ public class PostDTO {
 
     public void setIdCode(String idCode) {
         this.idCode = idCode;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 }

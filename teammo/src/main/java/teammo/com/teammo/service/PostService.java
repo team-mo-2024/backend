@@ -131,6 +131,7 @@ public class PostService {
         postDTO.setIsAnonymous(post.getIsAnonymous());
         postDTO.setType(post.getType());
         postDTO.setUserid(post.getUser().getUserId());
+        postDTO.setUserId(post.getUser().getId());
         postDTO.setIdCode(post.getApartment().getIdCode());
         return postDTO;
     }
