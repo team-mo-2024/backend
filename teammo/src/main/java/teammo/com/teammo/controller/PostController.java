@@ -28,6 +28,16 @@ public class PostController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    @GetMapping("/user/{userId}")
+    public List<PostDTO> getPostsByUserId(@PathVariable int userId) {
+        return postService.getPostsByUserId(userId);
+    }
+
+    @GetMapping("/type/{type}")
+    public List<PostDTO> getPostsByType(@PathVariable String type) {
+        return postService.getPostsByType(type);
+    }
+
     @PostMapping
     public ResponseEntity<PostDTO> createPost(@RequestBody PostDTO postDTO) {
         PostDTO createdPostDTO = postService.createPost(postDTO);

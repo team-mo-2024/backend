@@ -42,6 +42,18 @@ public class PostService {
         }
     }
 
+    // 특정 사용자의 게시물 조회
+    public List<PostDTO> getPostsByUserId(int userId) {
+        List<Post> posts = postRepository.findByUser_UserId(userId);
+        return posts.stream().map(this::convertToDTO).collect(Collectors.toList());
+    }
+
+    // 특정 유형의 게시물 조회
+    public List<PostDTO> getPostsByType(String type) {
+        List<Post> posts = postRepository.findByType(type);
+        return posts.stream().map(this::convertToDTO).collect(Collectors.toList());
+    }
+
     //새로운 게시물 생성
     public PostDTO createPost(PostDTO postDTO) {
         Post post = new Post();
