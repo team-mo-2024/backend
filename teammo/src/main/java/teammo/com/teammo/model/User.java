@@ -27,11 +27,11 @@ public class User {
     private Apartment apartment;
 
     // Getters and Setters
-    public int getUserid() {
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserid(int userid) {
+    public void setUserId(int userid) {
         this.userId = userid;
     }
 
